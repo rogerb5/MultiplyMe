@@ -8,6 +8,7 @@
 button {
     border: none;
     outline: 0;
+    color: black;
     font-weight: bold;
     background-color: white;
     font-size: 18px;
@@ -23,6 +24,11 @@ input[type=submit] {
     background: white;
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 16px;
+    color: black;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
 }
 
 input[type="text"] {
@@ -48,7 +54,7 @@ header {
 main {
     display: flex;
     justify-content: space-between;
-    min-height: 70vh;
+    min-height: 60vh;
 }
 
 div#response {

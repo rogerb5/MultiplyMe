@@ -95,7 +95,7 @@ function evaluateAnswer(input) {
     guessP.textContent = "Incorrect guesses = " + incorrectGuess;
     let average = (correctGuesses / totalGuesses);
     let precisionAvg = roundToPrecision(average, 2);
-    averageP.textContent = `Total average = ${(precisionAvg * 100).toFixed(2)}%`;
+    averageP.textContent = `Total average = ${(precisionAvg * 100).toFixed(0)}%`;
 }
 
 /*
