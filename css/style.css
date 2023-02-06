@@ -64,18 +64,18 @@ div#equation {
     padding: 0.6rem;
 }
 
-p#incorrect {
-    border: 1px solid rgb(210, 105, 110);
+p {
     padding: 0.333rem;
     opacity: 0;
     display: none;
 }
 
+p#incorrect {
+    border: 1px solid rgb(210, 105, 110);
+}
+
 p#correct {
     border: 1px solid rgb(120, 185, 110);
-    padding: 0.333rem;
-    opacity: 0;
-    display: none;
 }
 
 section.input-section {
