@@ -13,6 +13,7 @@ const counterTag = document.querySelector('div#counter');
 const exitButton = document.querySelector('button.exit-btn');
 const displayButton = document.querySelector('button.display-btn');
 const resultModal = document.querySelector('article.article-stats');
+
 const averageP = document.querySelector('p.avg');
 const guessP = document.querySelector('p.total-guesses');
 
