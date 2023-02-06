@@ -12,7 +12,7 @@ const correctTag = document.querySelector('p#correct');
 const counterTag = document.querySelector('div#counter');
 const exitButton = document.querySelector('button.exit-btn');
 const displayButton = document.querySelector('button.display-btn');
-const resultModal = document.querySelector('section.stats-section');
+const resultModal = document.querySelector('article.article-stats');
 const averageP = document.querySelector('p.avg');
 const guessP = document.querySelector('p.total-guesses');
 
@@ -95,9 +95,6 @@ function evaluateAnswer(input) {
     let average = (correctGuesses / totalGuesses);
     let precisionAvg = roundToPrecision(average, 2);
     averageP.textContent = `Total average = ${(precisionAvg * 100).toFixed(2)}%`;
-    // console.log('Total guesses: ', totalGuesses);
-    // console.log('Incorrect ', incorrectGuess);
-    // console.log("Average: ", average)
 }
 
 /*
@@ -119,7 +116,7 @@ function subtractPoint() {
 
 // Sets new updated point
 function setPoint() {
-    counterTag.textContent = points;
+    counterTag.textContent = "Points: " + points;
 }
 
 // Adds a point and updates earned points
@@ -156,7 +153,6 @@ function setDisplayNone(displayResult) {
 /*
     Takes a value as a parameter, and integer as a parameter
     returns a rounded value with two decimal places at most
-    https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary/11832950#11832950
 */
 function roundToPrecision(value, decimals = 2) {
     const pow = Math.pow(10, decimals);
