@@ -109,8 +109,8 @@ function subtractPoint() {
     } else {
         points -= 1;
     }
-    setDisplayBlock(incorrectTag);
-    setDisplayNone(correctTag);
+    addActiveClass(incorrectTag);
+    removeActiveClass(correctTag);
     incorrectTag.textContent = ('Incorrect: ' + integerOne + ' x ' + integerTwo + ' = ' + getProduct());
     setPoint();
 }
@@ -124,8 +124,8 @@ function setPoint() {
 function addPoint() {
     points += 1;
     correctTag.textContent = ('Correct!');
-    setDisplayBlock(correctTag);
-    setDisplayNone(incorrectTag);
+    addActiveClass(correctTag);
+    removeActiveClass(incorrectTag);
     setPoint();
 }
 
@@ -149,6 +149,14 @@ function setDisplayBlock(displayResult) {
 function setDisplayNone(displayResult) {
     displayResult.style.display = 'none';
     displayResult.style.opacity = 0;
+}
+
+function addActiveClass(element) {
+    element.classList.add('active')
+}
+
+function removeActiveClass(element) {
+    element.classList.remove('active');
 }
 
 /*
