@@ -16,6 +16,8 @@ const resultModal = document.querySelector('article.article-stats');
 
 const averageP = document.querySelector('p.avg');
 const guessP = document.querySelector('p.total-guesses');
+const MAX = 12;
+const MIN = 0;
 
 let points = 0;
 let correctGuesses = 0;
@@ -134,8 +136,8 @@ function addPoint() {
     and calls the displayEquation function.
 */
 function restartGame() {
-    integerOne = getRandomValue(0, 12);
-    integerTwo = getRandomValue(0, 12);
+    integerOne = getRandomValue(MIN, MAX);
+    integerTwo = getRandomValue(MIN, MAX);
     displayEquation();
 }
 
@@ -169,6 +171,6 @@ function roundToPrecision(value, decimals = 2) {
 }
 
 // run game on load
-let integerOne = getRandomValue(0, 12);
-let integerTwo = getRandomValue(0, 12);
+let integerOne = getRandomValue(MIN, MAX);
+let integerTwo = getRandomValue(MIN, MAX);
 displayEquation(); 
