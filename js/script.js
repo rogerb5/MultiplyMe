@@ -108,6 +108,7 @@ function evaluateAnswer(input) {
     else minus a point.
 */
 function subtractPoint() {
+    let product = getProduct();
     if (points <= 0) {
         points = 0;
     } else {
@@ -115,7 +116,7 @@ function subtractPoint() {
     }
     addActiveClass(incorrectTag);
     removeActiveClass(correctTag);
-    incorrectTag.textContent = ('Incorrect: ' + integerOne + ' x ' + integerTwo + ' = ' + getProduct());
+    incorrectTag.textContent = ('Incorrect: ' + integerOne + ' x ' + integerTwo + ' = ' + product);
     setPoint();
 }
 
