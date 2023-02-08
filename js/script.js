@@ -142,21 +142,23 @@ function restartGame() {
 }
 
 // sets css display block and opacity 1 on element
-function setDisplayBlock(displayResult) {
-    displayResult.style.display = 'block';
-    displayResult.style.opacity = 1;
+function setDisplayBlock(element) {
+    element.style.display = 'block';
+    element.style.opacity = 1;
 }
 
 // sets css display none and opacity 0 on element
-function setDisplayNone(displayResult) {
-    displayResult.style.display = 'none';
-    displayResult.style.opacity = 0;
+function setDisplayNone(element) {
+    element.style.display = 'none';
+    element.style.opacity = 0;
 }
 
+// add css classList to active
 function addActiveClass(element) {
     element.classList.add('active')
 }
 
+// remove css classList to remove
 function removeActiveClass(element) {
     element.classList.remove('active');
 }
