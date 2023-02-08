@@ -5,6 +5,8 @@
     of your points earned and display simple statistics of your progress.
     This game was programmed by Roger B during 2/5/2023    
 */
+"use strict";
+
 const equationTag = document.querySelector('div#equation');
 const inputBtn = document.querySelector('input.submit-btn');
 const incorrectTag = document.querySelector('p#incorrect');
