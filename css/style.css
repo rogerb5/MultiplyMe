@@ -128,7 +128,7 @@ article.article-stats {
     border: 1px solid #333;
     display: none;
     overflow-y: scroll;
-    height: 100px;
+    height: 200px;
 }
 
 div.incorrect-responses {
