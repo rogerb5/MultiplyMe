@@ -15,6 +15,9 @@ const counterTag = document.querySelector('div#counter');
 const exitButton = document.querySelector('button.exit-btn');
 const displayButton = document.querySelector('button.display-btn');
 const resultModal = document.querySelector('article.article-stats');
+const settingsButton = document.querySelector('button.settings-btn');
+const settingsExitButton = document.querySelector('button.exit');
+const settingModal = document.querySelector('section.settings');
 
 const averageP = document.querySelector('p.avg');
 const guessP = document.querySelector('p.total-guesses');
@@ -76,6 +79,14 @@ exitButton.addEventListener('click', () => {
 
 displayButton.addEventListener('click', () => {
     setDisplayBlock(resultModal);
+})
+
+settingsButton.addEventListener('click', () => {
+    settingModal.classList.add('active');
+})
+
+settingsExitButton.addEventListener('click', () => {
+    settingModal.classList.remove('active');
 })
 
 /*

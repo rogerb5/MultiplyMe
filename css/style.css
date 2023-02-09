@@ -48,7 +48,7 @@ input[type="text"] {
 header {
     text-align: center;
     width: 100%;
-    height: 100px;
+    height: 150px;
 }
 
 main {
@@ -81,38 +81,34 @@ div.point-container {
 
 p#incorrect.active {
     opacity: 1;
-    z-index: 1;
+    z-index: 0;
 }
 
 p#incorrect {
     border: 1px solid rgb(210, 105, 110);
-    /* background-color: rgb(210, 105, 110); */
-    /* color: whitesmoke; */
     padding: 0.333rem;
     opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 90%;
-    z-index: 0;
+    z-index: -1;
     transition: opacity 300ms ease-in-out;
 }
 
 p#correct {
     border: 1px solid rgb(120, 185, 110);
-    /* background-color: rgb(120, 185, 110); */
-    /* color: whitesmoke; */
     padding: 0.333rem;
     opacity: 0;
     position: absolute;
     width: 90%;
-    z-index: 0;
+    z-index: -1;
     transition: opacity 300ms ease-in-out;
 }
 
 p#correct.active {
     opacity: 1;
-    z-index: 1;
+    z-index: 0;
 }
 
 section.input-section {
@@ -128,9 +124,52 @@ article.article-stats {
     border: 1px solid #333;
     display: none;
     overflow-y: scroll;
-    height: 100px;
+    height: 200px;
 }
 
 div.incorrect-responses {
     border: 1px solid rgb(210, 105, 110);
+    display: flex;
+    justify-content: space-between;
+}
+
+/********************** Settings Page ***********/
+section.settings.active {
+    opacity: 1;
+    z-index: 0;
+}
+
+section.settings {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 300ms ease;
+    background-color: transparent;
+}
+
+div.information {
+    background-color: white;
+    width: 300px;
+    min-height: 150px;
+    text-align: center;
+    box-shadow: 0px 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+div.info-div {
+    background-color: #E0E1E9;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+div.info-div button {
+    background-color: #E0E1E9;
+}
+
+section.settings.active {
+    opacity: 1;
 }
