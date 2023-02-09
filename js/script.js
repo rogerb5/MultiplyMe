@@ -116,6 +116,7 @@ function subtractPoint() {
     }
     addActiveClass(incorrectTag);
     removeActiveClass(correctTag);
+    createWrongDiv(integerOne, integerTwo, product);
     incorrectTag.textContent = ('Incorrect: ' + integerOne + ' x ' + integerTwo + ' = ' + product);
     setPoint();
 }
@@ -164,6 +165,21 @@ function addActiveClass(element) {
 // remove css classList to remove
 function removeActiveClass(element) {
     element.classList.remove('active');
+}
+
+/*
+    Takes three integers as parameters
+    and creates a html div element which will display
+    the correct answer.
+*/
+function createWrongDiv(integerOne, integerTwo, product) {
+    const element = document.createElement('div');
+    element.innerHTML = `
+        <div class="incorrect-responses">
+            <p>${integerOne} x ${integerTwo} = ${product}</p>
+        </div>
+    `
+    resultModal.append(element);
 }
 
 /*
